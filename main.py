@@ -23,7 +23,7 @@ grap_params = {
     "name": "Using pycharm",
     "unit": "HH",
     "type": "float",
-    "color": "kuro"
+    "color": "shibafu"
 }
 
 headers = {
@@ -37,8 +37,8 @@ print(grap_response.text)
 post_endpoint = f"https://pixe.la/v1/users/{USER_NAME}/graphs/roko01"
 
 post_data = {
-    "date": "20180915",
-    "quantity": "5.2"
+    "date": "20230604",
+    "quantity": "5.2",
 }
 post_endpoint_response = requests.post(url=post_endpoint, json=post_data, headers=headers)
 
