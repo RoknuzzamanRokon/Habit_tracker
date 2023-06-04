@@ -1,4 +1,6 @@
 import requests
+from datetime import datetime
+
 
 TOKEN = "abcdefg43klm4l"
 USER_NAME = "rokon"
@@ -36,6 +38,8 @@ print(grap_response.text)
 
 post_endpoint = f"https://pixe.la/v1/users/{USER_NAME}/graphs/roko01"
 
+today_datetime = datetime.now()
+
 post_data = {
     "date": "20230604",
     "quantity": "5.2",
@@ -43,3 +47,4 @@ post_data = {
 post_endpoint_response = requests.post(url=post_endpoint, json=post_data, headers=headers)
 
 print(post_endpoint_response.text)
+
