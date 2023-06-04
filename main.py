@@ -34,3 +34,12 @@ grap_response = requests.post(url=grap_endpoint, json=grap_params, headers=heade
 print(pixela_response.text)
 print(grap_response.text)
 
+post_endpoint = f"https://pixe.la/v1/users/{USER_NAME}/graphs/roko01"
+
+post_data = {
+    "date": "20180915",
+    "quantity": "5.2"
+}
+post_endpoint_response = requests.post(url=post_endpoint, json=post_data, headers=headers)
+
+print(post_endpoint_response.text)
