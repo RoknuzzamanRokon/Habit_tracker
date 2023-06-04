@@ -41,8 +41,8 @@ post_endpoint = f"https://pixe.la/v1/users/{USER_NAME}/graphs/roko01"
 today_datetime = datetime.now()
 
 post_data = {
-    "date": "20230604",
-    "quantity": "5.2",
+    "date": today_datetime.strftime("%Y%m%d"),
+    "quantity": "9.2",
 }
 post_endpoint_response = requests.post(url=post_endpoint, json=post_data, headers=headers)
 
