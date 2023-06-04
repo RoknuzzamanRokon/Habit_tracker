@@ -1,7 +1,7 @@
 import requests
 
-TOKEN = "abcdefg"
-USER_NAME = "Rokon"
+TOKEN = "abcdefg43klm4l"
+USER_NAME = "rokon"
 
 pixela_endpoint = "https://pixe.la/v1/users"
 
@@ -13,7 +13,7 @@ user_params = {
 
 }
 
-pixela_response = requests.post(url=pixela_endpoint, params=user_params)
+pixela_response = requests.post(url=pixela_endpoint, json=user_params)
 
 
 grap_endpoint = f"https://pixe.la/v1/users/{USER_NAME}/graphs"
@@ -26,6 +26,11 @@ grap_params = {
     "color": "kuro"
 }
 
+headers = {
+    "X-USER-TOKEN": TOKEN}
 
-grap_response = requests.post(url=grap_endpoint, params=grap_params)
+grap_response = requests.post(url=grap_endpoint, json=grap_params, headers=headers)
+
+print(pixela_response.text)
+print(grap_response.text)
 
