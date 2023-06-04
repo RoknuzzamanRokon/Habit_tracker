@@ -13,4 +13,19 @@ user_params = {
 
 }
 
-response = requests.post(url=pixela_endpoint, params=user_params)
+pixela_response = requests.post(url=pixela_endpoint, params=user_params)
+
+
+grap_endpoint = f"https://pixe.la/v1/users/{USER_NAME}/graphs"
+
+grap_params = {
+    "id": "roko01",
+    "name": "Using pycharm",
+    "unit": "HH",
+    "type": "float",
+    "color": "kuro"
+}
+
+
+grap_response = requests.post(url=grap_endpoint, params=grap_params)
+
